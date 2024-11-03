@@ -1,34 +1,31 @@
 import { DevTool } from "@hookform/devtools";
-import { data } from "autoprefixer";
 import React from "react";
 import { useForm } from "react-hook-form";
 
+const defaultValues = {
+  username: "fullusername",
+  email: "user@gmail.com",
+  password: "",
+  address: {
+    country: "Ethiopia",
+    city: "Addis Ababa",
+    zipcode: "1234",
+  },
+  phoneNumbers: ["Primary Phone", "Secondary Phone"],
+};
+
 const RegisterForm = () => {
-  const form = useForm({
-    defaultValues: {
-      username: "fullusername",
-      email: "user@gmail.com",
-      password: "",
-      address: {
-        country: "Ethiopia",
-        city: "Addis Ababa",
-        zipcode: "1234",
-      },
-    },
-  });
+  const form = useForm({ defaultValues });
   const { register, control, handleSubmit, formState } = form;
   const { errors } = formState;
-  console.log("Form Error  : ", errors);
+
   const onSubmit = (data) => {
     console.log("Form Data : ", data);
   };
+
   return (
-    <div className="  bg-gray-200 p-6 w-[700px] shadow-md rounded-md border-2 border-lime-500">
-      <form
-        action=""
-        className="flex flex-col gap-4"
-        onSubmit={handleSubmit(onSubmit)}
-      >
+    <div className="bg-gray-200 p-6 w-[700px] shadow-md rounded-md border-2 border-lime-500">
+      <form className="flex flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
         <div className="flex flex-col">
           <label htmlFor="username">Your Name</label>
           <input
@@ -36,16 +33,14 @@ const RegisterForm = () => {
             type="text"
             id="username"
             {...register("username", {
-              required: {
-                value: true,
-                message: "Username Is Required",
-              },
+              required: "Username is required",
             })}
           />
           <p className="text-sm mt-4 text-red-600 font-normal">
             {errors.username?.message}
           </p>
         </div>
+
         <div className="flex flex-col">
           <label htmlFor="email">Email Address</label>
           <input
@@ -53,9 +48,10 @@ const RegisterForm = () => {
             type="email"
             id="email"
             {...register("email", {
-              required: {
-                value: true,
-                message: "E-mail Is Required",
+              required: "Email is required",
+              pattern: {
+                value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                message: "Invalid email address",
               },
             })}
           />
@@ -71,14 +67,10 @@ const RegisterForm = () => {
             type="password"
             id="password"
             {...register("password", {
-              required: {
-                value: true,
-                message: "Password Is Required",
-              },
-              validate: {
-                passLength: (fieldValue) => {
-                  return fieldValue.length >= 8 || "Password is To Short";
-                },
+              required: "Password is required",
+              minLength: {
+                value: 8,
+                message: "Password must be at least 8 characters long",
               },
             })}
           />
@@ -86,48 +78,36 @@ const RegisterForm = () => {
             {errors.password?.message}
           </p>
         </div>
+
         <div className="flex flex-col">
-          <label htmlFor="country">Country</label>
+          <label htmlFor="primaryPhone">Primary Phone</label>
           <input
             className="py-1 rounded-sm w-full px-2"
-            type="country"
-            id="country"
-            {...register("address.country", {
-              required: {
-                value: true,
-                message: "Country Is Required",
-              },
-              validate: {
-                passLength: (fieldValue) => {
-                  return fieldValue.length >= 4 || "Country is To Short";
-                },
-              },
+            type="text"
+            id="primaryPhone"
+            {...register("phoneNumbers.0", {
+              required: "Primary phone number is required",
+              minLength: { value: 4, message: "Phone number is too short" },
             })}
           />
           <p className="text-sm mt-4 text-red-600 font-normal">
-            {errors.country?.message}
+            {errors.phoneNumbers?.[0]?.message}
           </p>
         </div>
+
         <div className="flex flex-col">
-          <label htmlFor="city">City</label>
+          <label htmlFor="secondaryPhone">Secondary Phone</label>
           <input
             className="py-1 rounded-sm w-full px-2"
-            type="city"
-            id="city"
-            {...register("address.city", {
-              required: {
-                value: true,
-                message: "city Is Required",
-              },
-              validate: {
-                passLength: (fieldValue) => {
-                  return fieldValue.length >= 4 || "city is To Short";
-                },
-              },
+            type="text"
+            id="secondaryPhone"
+            {...register("phoneNumbers.1", {
+              required: "Secondary phone number is required",
+              minLength: { value: 4, message: "Phone number is too short" },
             })}
           />
           <p className="text-sm mt-4 text-red-600 font-normal">
-            {errors.city?.message}
+            {errors.phoneNumbers?.[1]?.message}
           </p>
         </div>
 
@@ -138,7 +118,6 @@ const RegisterForm = () => {
               id="subscribe"
               name="subscribe"
               value="newsletter"
-              className="pr-2 "
             />
             Remember Me
           </label>
