@@ -1,0 +1,158 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Gaming Laptop X1",
+      "category": "Gaming",
+      "color": "Black",
+      "ram": "16GB",
+      "price": 1500,
+      "brand": "GamerPro",
+      "processor": "Intel i7",
+      "imageUrl": "https://media.istockphoto.com/id/123095315/photo/e-commerce-laptop-and-credit-card.jpg?s=612x612&w=0&k=20&c=bAj02hA020XNte0pNTMVktaCWDOooegixhOOOV6EYnY="
+    },
+    {
+      "id": 2,
+      "name": "E-Commerce Workstation",
+      "category": "Business",
+      "color": "Silver",
+      "ram": "8GB",
+      "price": 1200,
+      "brand": "BizTech",
+      "processor": "Intel i5",
+      "imageUrl": "https://media.istockphoto.com/id/511210673/photo/gamer-laptop-with-video-game.jpg?s=612x612&w=0&k=20&c=0FEiel8QJj95RBrb57OJTTVqsr4Zg_1ytZxoGnQMSXo="
+    },
+    {
+      "id": 3,
+      "name": "Lightweight Ultrabook",
+      "category": "Portable",
+      "color": "Gray",
+      "ram": "8GB",
+      "price": 1000,
+      "brand": "UltraGo",
+      "processor": "Intel i3",
+      "imageUrl": "https://media.istockphoto.com/id/134135277/photo/laptop.jpg?s=612x612&w=0&k=20&c=cfKCOLr7pHWL21gxV-JUJhzl2sidfJco-Hh0ecjD6Js="
+    },
+    {
+      "id": 4,
+      "name": "Pro Gaming Rig",
+      "category": "Gaming",
+      "color": "Red",
+      "ram": "32GB",
+      "price": 2000,
+      "brand": "GamerPro",
+      "processor": "AMD Ryzen 9",
+      "imageUrl": "https://media.istockphoto.com/id/123095315/photo/e-commerce-laptop-and-credit-card.jpg?s=612x612&w=0&k=20&c=bAj02hA020XNte0pNTMVktaCWDOooegixhOOOV6EYnY="
+    },
+    {
+      "id": 5,
+      "name": "Business Laptop Pro",
+      "category": "Business",
+      "color": "Blue",
+      "ram": "16GB",
+      "price": 1400,
+      "brand": "BizTech",
+      "processor": "Intel i7",
+      "imageUrl": "https://media.istockphoto.com/id/134135277/photo/laptop.jpg?s=612x612&w=0&k=20&c=cfKCOLr7pHWL21gxV-JUJhzl2sidfJco-Hh0ecjD6Js="
+    },
+    {
+      "id": 6,
+      "name": "Compact Ultrabook Z1",
+      "category": "Portable",
+      "color": "Black",
+      "ram": "4GB",
+      "price": 800,
+      "brand": "UltraGo",
+      "processor": "Intel i3",
+      "imageUrl": "https://media.istockphoto.com/id/511210673/photo/gamer-laptop-with-video-game.jpg?s=612x612&w=0&k=20&c=0FEiel8QJj95RBrb57OJTTVqsr4Zg_1ytZxoGnQMSXo="
+    },
+    {
+      "id": 7,
+      "name": "High-Performance Gaming Beast",
+      "category": "Gaming",
+      "color": "Green",
+      "ram": "64GB",
+      "price": 3000,
+      "brand": "GamerPro",
+      "processor": "AMD Ryzen 9",
+      "imageUrl": "https://media.istockphoto.com/id/123095315/photo/e-commerce-laptop-and-credit-card.jpg?s=612x612&w=0&k=20&c=bAj02hA020XNte0pNTMVktaCWDOooegixhOOOV6EYnY="
+    },
+    {
+      "id": 8,
+      "name": "Business Laptop Z2",
+      "category": "Business",
+      "color": "White",
+      "ram": "8GB",
+      "price": 1100,
+      "brand": "BizTech",
+      "processor": "Intel i5",
+      "imageUrl": "https://media.istockphoto.com/id/134135277/photo/laptop.jpg?s=612x612&w=0&k=20&c=cfKCOLr7pHWL21gxV-JUJhzl2sidfJco-Hh0ecjD6Js="
+    },
+    {
+      "id": 9,
+      "name": "Portable Office Laptop",
+      "category": "Portable",
+      "color": "Silver",
+      "ram": "16GB",
+      "price": 1300,
+      "brand": "UltraGo",
+      "processor": "Intel i7",
+      "imageUrl": "https://media.istockphoto.com/id/511210673/photo/gamer-laptop-with-video-game.jpg?s=612x612&w=0&k=20&c=0FEiel8QJj95RBrb57OJTTVqsr4Zg_1ytZxoGnQMSXo="
+    },
+    {
+      "id": 10,
+      "name": "Ultimate Gaming Machine",
+      "category": "Gaming",
+      "color": "Black & Red",
+      "ram": "32GB",
+      "price": 2500,
+      "brand": "GamerPro",
+      "processor": "Intel i9",
+      "imageUrl": "https://media.istockphoto.com/id/134135277/photo/laptop.jpg?s=612x612&w=0&k=20&c=cfKCOLr7pHWL21gxV-JUJhzl2sidfJco-Hh0ecjD6Js="
+    },
+    {
+      "id": 11,
+      "name": "Gaming Monster X2",
+      "category": "Gaming",
+      "color": "Black",
+      "ram": "64GB",
+      "price": 3200,
+      "brand": "GamerPro",
+      "processor": "AMD Ryzen 9",
+      "imageUrl": "https://media.istockphoto.com/id/123095315/photo/e-commerce-laptop-and-credit-card.jpg?s=612x612&w=0&k=20&c=bAj02hA020XNte0pNTMVktaCWDOooegixhOOOV6EYnY="
+    },
+    {
+      "id": 12,
+      "name": "Business Laptop Elite",
+      "category": "Business",
+      "color": "Gray",
+      "ram": "32GB",
+      "price": 2000,
+      "brand": "BizTech",
+      "processor": "Intel i9",
+      "imageUrl": "https://media.istockphoto.com/id/511210673/photo/gamer-laptop-with-video-game.jpg?s=612x612&w=0&k=20&c=0FEiel8QJj95RBrb57OJTTVqsr4Zg_1ytZxoGnQMSXo="
+    },
+    {
+      "id": 13,
+      "name": "Portable Gaming Laptop",
+      "category": "Portable",
+      "color": "Silver",
+      "ram": "8GB",
+      "price": 1400,
+      "brand": "UltraGo",
+      "processor": "Intel i7",
+      "imageUrl": "https://media.istockphoto.com/id/134135277/photo/laptop.jpg?s=612x612&w=0&k=20&c=cfKCOLr7pHWL21gxV-JUJhzl2sidfJco-Hh0ecjD6Js="
+    },
+    {
+      "id": 14,
+      "name": "Compact Business Rig",
+      "category": "Business",
+      "color": "Black",
+      "ram": "16GB",
+      "price": 1500,
+      "brand": "BizTech",
+      "processor": "Intel i5",
+      "imageUrl": "https://media.istockphoto.com/id/123095315/photo/e-commerce-laptop-and-credit-card.jpg?s=612x612&w=0&k=20&c=bAj02hA020XNte0pNTMVktaCWDOooegixhOOOV6EYnY="
+    }
+  ]
+}
