@@ -7,13 +7,14 @@ import JustHooks from "./components/product-v1/JustHooks";
 import ReactQuery from "./components/product-react-query/ReactQuery";
 import ReactToolKits from "./components/product-v2/ReactToolKits";
 import ProductDetails from "./components/product-react-query/ProductDetails";
+import InfiniteScroll from "./components/product-react-query/InfiniteScroll";
 
 const App = () => {
   return (
     <div className="container flex flex-col mx-auto gap-12 py-4">
       <Navbar />
       <Routes>
-        <Route index element={<HomePage />} />
+        <Route index element={<InfiniteScroll />} />
 
         <Route path="/just-hooks" element={<JustHooks />} />
         <Route path="/react-tool-kit" element={<ReactToolKits />} />

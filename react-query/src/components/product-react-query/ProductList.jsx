@@ -27,7 +27,7 @@ const ProductList = ({ setRefetchProducts }) => {
     },
   });
 
-  const { isLoading, isError, data } = response;
+  const { isLoading, isError, data, error } = response;
   const products = data?.data;
 
   if (isLoading) {
@@ -35,7 +35,7 @@ const ProductList = ({ setRefetchProducts }) => {
   }
 
   if (isError) {
-    return <p>Error occurred</p>;
+    return <p className="text-xl font-bold text-red-700">{error.message}</p>;
   }
 
   return (
