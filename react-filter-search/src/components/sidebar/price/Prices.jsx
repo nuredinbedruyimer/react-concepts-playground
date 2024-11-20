@@ -7,7 +7,7 @@ const Prices = () => {
       <div className="border-2 border-gray-400 rounded-md">
         <h1 className="text-md text-center font-bold text-lime-500">Prices</h1>
         <div className="p-6">
-          <Radio category="$0 - $100" />
+          <Radio category=" All" />
           <Radio category="$0 - $100" />
           <Radio category="$0 - $100" />
           <Radio category="$0 - $100" />

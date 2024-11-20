@@ -1,10 +1,10 @@
 import React from "react";
-import RegisterForm from "./components/RegisterForm";
+import Stepper from "./components/MultiStageForm/components/Stepper";
 
 const App = () => {
   return (
-    <div className="flex  justify-center items-center min-h-screen">
-      <RegisterForm />
+    <div className="flex flex-col  justify-center items-center min-h-screen">
+      <Stepper />
     </div>
   );
 };
