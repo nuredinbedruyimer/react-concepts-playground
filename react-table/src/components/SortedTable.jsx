@@ -1,9 +1,9 @@
-import { COLUMNS, COLUMNS_GROUPS } from "../utils/columns";
+import { COLUMNS } from "../utils/columns";
 import React, { useMemo } from "react";
-import { useTable } from "react-table";
+import { useTable, useSortBy } from "react-table";
 import { jsonData } from "../utils/data";
 
-const BasicTable = () => {
+const SortedTable = () => {
   const data = useMemo(() => jsonData, []);
   const columns = useMemo(() => COLUMNS, []);
 
@@ -14,10 +14,13 @@ const BasicTable = () => {
     rows,
     getTableProps,
     footerGroups,
-  } = useTable({
-    data,
-    columns,
-  });
+  } = useTable(
+    {
+      data,
+      columns,
+    },
+    useSortBy
+  );
 
   return (
     <div className="p-4 flex justify-center">
@@ -37,14 +40,32 @@ const BasicTable = () => {
               >
                 {headerGroup.headers.map((column) => {
                   const { key: columnKey, ...columnProps } =
-                    column.getHeaderProps();
+                    column.getHeaderProps(column.getSortByToggleProps());
                   return (
                     <th
                       key={columnKey}
                       {...columnProps}
-                      className="px-3 py-4 border border-gray-300 text-left font-semibold"
+                      className="px-3 py-4 border border-gray-300 text-left font-semibold cursor-pointer select-none"
                     >
-                      {column.render("Header")}
+                      <div className="flex items-center gap-2">
+                        {column.render("Header")}
+                        {/* Sorting indicator */}
+                        {column.isSorted ? (
+                          column.isSortedDesc ? (
+                            <span className="text-white font-bold text-3xl">
+                              ↓
+                            </span> // Descending icon
+                          ) : (
+                            <span className="text-white font-bold text-3xl">
+                              ↑
+                            </span> // Ascending icon
+                          )
+                        ) : (
+                          <span className="text-gray-400  font-bold text-3xl">
+                            ⇅
+                          </span> // Default icon
+                        )}
+                      </div>
                     </th>
                   );
                 })}
@@ -107,4 +128,4 @@ const BasicTable = () => {
   );
 };
 
-export default BasicTable;
+export default SortedTable;
